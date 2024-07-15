@@ -141,7 +141,7 @@ libgl1-mesa-dev libgles2-mesa-dev libglvnd-dev libjansson-dev libluajit-5.1-dev 
 libmbedtls-dev libpci-dev libvulkan-dev libwayland-dev libx11-dev libx11-xcb-dev \
 libx264-dev libxcb-composite0-dev libxcb-randr0-dev libxcb-shm0-dev libxcb-xfixes0-dev \
 libxcb-xinerama0-dev libxcb1-dev libxcomposite-dev libxdamage-dev libxinerama-dev \
-libxss-dev python3-dev uthash-dev nv-codec-headers swig"
+libxss-dev python3-dev uthash-dev libffmpeg-nvenc-dev swig"
 
     # SRT & RIST Protocol Support
     if [ "${DISTRO_CMP_VER}" -ge 2210 ]; then

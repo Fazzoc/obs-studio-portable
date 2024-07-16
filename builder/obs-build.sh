@@ -279,7 +279,7 @@ function stage_05_build_obs() {
       -DCALM_DEPRECATION=ON \
       -DCMAKE_BUILD_TYPE="${BUILD_TYPE}" \
       -DCMAKE_INSTALL_PREFIX="${INSTALL_TO}" \
-      -DENABLE_AJA=ON \
+      -DENABLE_AJA=OFF \
       -DAJA_LIBRARIES_INCLUDE_DIR="${DIR_BUILD}"/aja/include/ \
       -DAJA_NTV2_LIB="${DIR_BUILD}"/aja/lib/libajantv2.a \
       -DCEF_ROOT_DIR="${DIR_BUILD}/cef" \
@@ -532,7 +532,7 @@ function stage_11_make_tarball() {
 stage_01_get_apt
 stage_02_get_obs
 stage_03_get_cef
-stage_04_build_aja
+#stage_04_build_aja
 stage_05_build_obs system
 stage_05_build_obs portable
 stage_06_plugins

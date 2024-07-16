@@ -537,7 +537,7 @@ stage_05_build_obs system
 stage_05_build_obs portable
 stage_06_plugins
 stage_07_scripts
-stage_08_themes
+#stage_08_themes
 stage_09_finalise
 stage_10_make_scripts
 stage_11_make_tarball

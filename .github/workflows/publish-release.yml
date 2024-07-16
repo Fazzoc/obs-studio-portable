@@ -88,9 +88,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        RELEASE_EXISTS=$(gh release view "${{ github.ref }}" --json id --template '{{.id}}' 2>/dev/null || echo "not_found")
-        if [ "$RELEASE_EXISTS" == "not_found" ]; then
-          gh release create "${{ github.ref }}" --draft=false --title "${{ github.ref }}"
-        else
-          gh release edit "${{ github.ref }}" --draft=false
+        if [ "$(gh release view "${{ github.ref }}" --json assets --template '{{len .assets}}')" -lt 0 ]; then
+          exit 1
         fi
+        gh release edit "${{ github.ref }}" --draft=false

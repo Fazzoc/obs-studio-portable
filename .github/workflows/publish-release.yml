@@ -77,18 +77,4 @@ jobs:
         for artefact in "artefacts/obs-portable-${{ matrix.version }}"*; do
           gh release upload "${{ github.ref }}" "${artefact}" --clobber
         done
-
-  publish-release:
-    name: Publish release
-    runs-on: ubuntu-latest
-    needs: [create-release, build]
-    steps:
-    - uses: actions/checkout@v4
-    - name: Publish release ${{ github.ref }}
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        if [ "$(gh release view "${{ github.ref }}" --json assets --template '{{len .assets}}')" -lt 0 ]; then
-          exit 1
-        fi
         gh release edit "${{ github.ref }}" --draft=false

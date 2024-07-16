@@ -12,7 +12,7 @@ fi
 
 case ${OBS_MAJ_VER} in
     30)
-        AJA_VER="v16.2-bugfix5"
+        AJA_VER="ntv2_17_0_1"
         CEF_VER="5060";;
     *)
         echo "ERROR! Unsupported version: ${OBS_MAJ_VER}"
@@ -220,7 +220,7 @@ function stage_03_get_cef() {
 }
 
 function stage_04_build_aja() {
-    download_file "https://github.com/aja-video/ntv2/archive/refs/tags/${AJA_VER}.tar.gz"
+    download_file "https://github.com/aja-video/libajantv2/archive/refs/tags/${AJA_VER}.tar.gz"
     mkdir -p "${DIR_SOURCE}/ntv2"
     bsdtar --strip-components=1 -xf "${DIR_DOWNLOAD}/${AJA_VER}.tar.gz" -C "${DIR_SOURCE}/ntv2"
     cmake -S "${DIR_SOURCE}/ntv2/" -B "${DIR_SOURCE}/ntv2/build/" -G Ninja \

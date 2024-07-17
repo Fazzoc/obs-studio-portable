@@ -77,4 +77,3 @@ jobs:
         for artefact in "artefacts/obs-portable-${{ matrix.version }}"*; do
           gh release upload "${{ github.ref }}" "${artefact}" --clobber
         done
-        gh release edit "${{ github.ref }}" --draft=false

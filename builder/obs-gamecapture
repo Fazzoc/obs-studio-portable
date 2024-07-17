@@ -24,7 +24,7 @@ fi
 PORTABLE_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
 
 export LD_LIBRARY_PATH="${PORTABLE_DIR}/lib"${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
-export LD_PRELOAD="${PORTABLE_DIR}/lib/libobs_glcapture.so"${LD_PRELOAD:+:$LD_PRELOAD}
+export LD_PRELOAD="${PORTABLE_DIR}/lib/obs_glcapture/libobs_glcapture.so"${LD_PRELOAD:+:$LD_PRELOAD}
 export OBS_VKCAPTURE=1
 
 # Cannot create EGLImage: Arguments are inconsistent

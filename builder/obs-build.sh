@@ -137,7 +137,7 @@ function stage_01_get_apt() {
     # the upstream OBS build instructions
     PKG_LIST+=" libavcodec-dev libavdevice-dev libavfilter-dev libavformat-dev \
 libavutil-dev libswresample-dev libswscale-dev libcmocka-dev libcurl4-openssl-dev \
-libgl1-mesa-dev libgles2-mesa-dev libglvnd-dev libjansson-dev libluajit-5.1-dev \
+libgl-dev libgles-dev libglvnd-dev libjansson-dev libluajit-5.1-dev \
 libmbedtls-dev libpci-dev libvulkan-dev libwayland-dev libx11-dev libx11-xcb-dev \
 libx264-dev libxcb-composite0-dev libxcb-randr0-dev libxcb-shm0-dev libxcb-xfixes0-dev \
 libxcb-xinerama0-dev libxcb1-dev libxcomposite-dev libxdamage-dev libxinerama-dev \
@@ -513,8 +513,8 @@ function stage_10_make_scripts() {
     {
     echo -e '\tqt6-image-formats-plugins \\\n\tqt6-qpa-plugins \\\n\tqt6-wayland \\' | tee -a "${DIR_INSTALL}/obs-dependencies" "${DIR_INSTALL}/obs-container-dependencies"
     echo -e '\tgstreamer1.0-plugins-good \\\n\tgstreamer1.0-plugins-bad \\\n\tgstreamer1.0-plugins-ugly \\\n\tgstreamer1.0-x \\' | tee -a "${DIR_INSTALL}/obs-dependencies" "${DIR_INSTALL}/obs-container-dependencies"
-    echo -e '\tlibgles2-mesa \\\n\tlua-lgi \\\n\tlibvlc5 \\\n\tvlc-plugin-base \\\n\tstterm' | tee -a "${DIR_INSTALL}/obs-dependencies"
-    echo -e '\tlibgles2-mesa \\\n\tlua-lgi \\\n\tlibvlc5 \\\n\tvlc-plugin-base \\\n\tstterm \\' | tee -a "${DIR_INSTALL}/obs-container-dependencies"
+    echo -e '\tlibgles2 \\\n\tlua-lgi \\\n\tlibvlc5 \\\n\tvlc-plugin-base \\\n\tstterm' | tee -a "${DIR_INSTALL}/obs-dependencies"
+    echo -e '\tlibgles2 \\\n\tlua-lgi \\\n\tlibvlc5 \\\n\tvlc-plugin-base \\\n\tstterm \\' | tee -a "${DIR_INSTALL}/obs-container-dependencies"
     echo -e '\tmesa-vdpau-drivers \\\n\tmesa-va-drivers && \\' | tee -a "${DIR_INSTALL}/obs-container-dependencies"
     echo -e 'apt-get -y clean && rm -rd /var/lib/apt/lists/*' | tee -a "${DIR_INSTALL}/obs-container-dependencies"
     }

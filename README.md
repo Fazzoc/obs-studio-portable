@@ -7,7 +7,7 @@
 <p align="center"><b>Portable builds of OBS Studio for Linux, pre-loaded with extra features and plugins for live streaming and screen recording</b></p>
 <p align="center">
 <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/wimpysworld/obs-studio-portable/total?logo=github&label=Downloads">
-</p>
+</p> 
 
 <p align="center">Made with 💝 for 🐧</p>
 
